@@ -1,4 +1,15 @@
-// Please update this type as same as with the data shape.
+type List = Folder[];
+
+type Folder = {
+  id: string;
+  name: string;
+  files: File[];
+};
+
+type File = {
+  id: string;
+  name: string;
+};
 
 export default function move(list: List, source: string, destination: string): List {
   // finding destination index in folders list
@@ -20,16 +31,3 @@ export default function move(list: List, source: string, destination: string): L
 
   return list;
 }
-
-type List = Folder[];
-
-type Folder = {
-  id: string;
-  name: string;
-  files: File[];
-};
-
-type File = {
-  id: string;
-  name: string;
-};
